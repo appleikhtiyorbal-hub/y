@@ -1,0 +1,59 @@
+[
+  {
+    "id": "markaz-1",
+    "type": "sale",
+    "title": "3 xonali, Markaz",
+    "price": 85000,
+    "currency": "USD",
+    "rooms": 3,
+    "area": 72,
+    "address": "Mustaqillik ko‘chasi 10, Termiz",
+    "lat": 37.2242,
+    "lng": 67.2783,
+    "cover": "/images/chilonzor-1.jpg",
+    "panoramas": [
+      { "id": "zal", "title": "Zal", "url": "/pano/zal.jpg?v=2" },
+      { "id": "oshxona", "title": "Oshxona", "url": "/pano/oshxona.jpg?v=2" },
+      { "id": "yotoqxona", "title": "Yotoqxona", "url": "/pano/yotoqxona.jpg?v=2" }
+    ],
+    "phone": "+998901112233",
+    "telegram": "uy360demo"
+  },
+  {
+    "id": "manguzar-2",
+    "type": "sale",
+    "title": "2 xonali, Manguzar",
+    "price": 62000,
+    "currency": "USD",
+    "rooms": 2,
+    "area": 54,
+    "address": "Manguzar MFY, Termiz",
+    "lat": 37.237,
+    "lng": 67.268,
+    "cover": "/images/yunusobod-2.jpg",
+    "panoramas": [
+      { "id": "zal", "title": "Zal", "url": "/pano/zal.jpg?v=2" },
+      { "id": "yotoqxona", "title": "Yotoqxona", "url": "/pano/yotoqxona.jpg?v=2" }
+    ],
+    "phone": "+998907778899",
+    "telegram": "uy360demo"
+  },
+  {
+    "id": "farhod-1",
+    "type": "rent",
+    "title": "1 xonali, Farhod",
+    "price": 450,
+    "currency": "USD",
+    "rooms": 1,
+    "area": 38,
+    "address": "Farhod MFY, Termiz",
+    "lat": 37.218,
+    "lng": 67.291,
+    "cover": "/images/mirzo-1.jpg",
+    "panoramas": [
+      { "id": "zal", "title": "Zal", "url": "/pano/oshxona.jpg?v=2" }
+    ],
+    "phone": "+998933334455",
+    "telegram": "uy360demo"
+  }
+]

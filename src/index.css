@@ -1,0 +1,303 @@
+:root {
+  --bg: var(--tg-theme-bg-color, #0b1220);
+  --text: var(--tg-theme-text-color, #f8fafc);
+  --hint: var(--tg-theme-hint-color, #94a3b8);
+  --btn: var(--tg-theme-button-color, #2563eb);
+  --btn-text: var(--tg-theme-button-text-color, #ffffff);
+  --card: var(--tg-theme-secondary-bg-color, #111827);
+  --sale: #3b82f6;
+  --rent: #10b981;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100svh;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.app-header {
+  position: absolute;
+  z-index: 500;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.app-header > * {
+  pointer-events: auto;
+}
+
+.app-kicker {
+  margin: 0;
+  font-size: 12px;
+  color: var(--hint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.filter-bar,
+.pano-rooms {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.filter-chip {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: color-mix(in srgb, var(--card) 88%, black);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.filter-chip.is-active {
+  background: var(--btn);
+  color: var(--btn-text);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  background: #d5dde8;
+}
+
+.map-pin-wrap {
+  background: none !important;
+  border: 0 !important;
+}
+
+.map-pin {
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50% 50% 4px;
+  transform: rotate(-45deg);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+  border: 2px solid #fff;
+}
+
+.map-pin span {
+  transform: rotate(45deg);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.map-pin-sale {
+  background: var(--sale);
+}
+
+.map-pin-rent {
+  background: var(--rent);
+}
+
+.map-pin.is-selected {
+  transform: rotate(-45deg) scale(1.12);
+}
+
+.listing-card {
+  position: absolute;
+  z-index: 600;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--card);
+  border-radius: 20px 20px 0 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-height: 72%;
+}
+
+.listing-card-handle {
+  display: block;
+  width: 48px;
+  height: 5px;
+  margin: 10px auto 0;
+  border: 0;
+  border-radius: 99px;
+  background: #64748b;
+}
+
+.listing-card-cover {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #1f2937;
+}
+
+.listing-card-body {
+  padding: 12px 16px 20px;
+}
+
+.listing-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listing-card h2 {
+  margin: 8px 0 4px;
+  font-size: 20px;
+}
+
+.listing-card-price {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.listing-card-meta {
+  margin: 6px 0 14px;
+  color: var(--hint);
+  font-size: 14px;
+}
+
+.listing-card-close {
+  border: 0;
+  background: transparent;
+  color: var(--hint);
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.badge-sale {
+  background: var(--sale);
+}
+
+.badge-rent {
+  background: var(--rent);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--btn);
+  color: var(--btn-text);
+  font-weight: 700;
+}
+
+.listing-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-ghost {
+  background: color-mix(in srgb, var(--text) 10%, transparent);
+  color: var(--text);
+}
+
+.pano-view {
+  position: absolute;
+  inset: 0;
+  z-index: 700;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.pano-loading {
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.pano-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(11, 18, 32, 0.88);
+}
+
+.pano-bar button {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: var(--btn);
+  color: var(--btn-text);
+}
+
+.pano-bar div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pano-bar span {
+  font-size: 12px;
+  color: var(--hint);
+}
+
+.pano-canvas {
+  flex: 1;
+  min-height: 240px;
+}
+
+.pano-rooms {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 16px;
+  justify-content: center;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}
