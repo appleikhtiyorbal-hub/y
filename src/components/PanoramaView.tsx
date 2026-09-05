@@ -40,7 +40,6 @@ export function PanoramaView({ listing, onClose }: PanoramaViewProps) {
         touchmoveTwoFingers: false,
         mousewheelCtrlKey: false,
       })
-      viewer.addEventListener('ready', () => viewer?.resize(), { once: true })
       viewerRef.current = viewer
       readyRef.current = true
       skipNextPanorama.current = true
