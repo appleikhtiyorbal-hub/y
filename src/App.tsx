@@ -3,6 +3,7 @@ import listingsData from './data/listings.json' with { type: 'json' }
 import { FilterBar } from './components/FilterBar'
 import { ListingCard } from './components/ListingCard'
 import { MapView } from './components/MapView'
+import { assetUrl } from './lib/assets'
 import { useTelegramBackButton } from './telegram'
 import type { Listing, ListingFilter } from './types'
 
@@ -11,7 +12,14 @@ const PanoramaView = lazy(async () => {
   return { default: module.PanoramaView }
 })
 
-const listings = listingsData as Listing[]
+const listings = (listingsData as Listing[]).map((listing) => ({
+  ...listing,
+  cover: assetUrl(listing.cover),
+  panoramas: listing.panoramas.map((pano) => ({
+    ...pano,
+    url: assetUrl(pano.url),
+  })),
+}))
 
 export default function App() {
   const [filter, setFilter] = useState<ListingFilter>('all')

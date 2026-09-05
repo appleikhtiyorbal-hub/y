@@ -11,6 +11,8 @@ npm run dev
 
 Brauzerda `http://localhost:5173` — xarita, pin, card va 360° shu yerda tekshiriladi.
 
+Internetdagi manzil (GitHub Pages): https://appleikhtiyorbal-hub.github.io/y/
+
 ## Telegram bot
 
 1. [@BotFather](https://t.me/BotFather) da bot oching, token oling.
