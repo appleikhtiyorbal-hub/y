@@ -33,8 +33,11 @@ WEBAPP_URL=https://....trycloudflare.com
 5. BotFather → bot → `/newapp` yoki Menu Button → Mini App URL.
 6. `npm run bot`, keyin Telegramda `/start` → **Ilovani ochish**.
 
-## E’lon qo‘shish
+## Admin panel
 
-[`src/data/listings.json`](src/data/listings.json) ga yangi obyekt qo‘shing. 360° rasm **equirectangular** bo‘lishi kerak (odatda 2:1, Insta360 / Ricoh Theta). Oddiy telefon rasmi 360 bo‘lmaydi.
+Saytda: https://appleikhtiyorbal-hub.github.io/y/#/admin  
+yoki **Uy 360** sarlavhasini 5 marta bosing.
 
-Rasmlar: `public/images/` (cover), `public/pano/` (panorama).
+GitHub Personal Access Token kerak (`repo` huquqi). Token faqat brauzerda saqlanadi. Saqlagach Actions `gh-pages` ni 1–2 daqiqada yangilaydi.
+
+360° rasm **equirectangular** bo‘lishi kerak (Insta360 / Ricoh Theta). Oddiy telefon rasmi 360 bo‘lmaydi.
