@@ -79,5 +79,27 @@
     ],
     "phone": "+998933334455",
     "telegram": "uy360demo"
+  },
+  {
+    "id": "3-mtp2v3mb",
+    "type": "sale",
+    "title": "3",
+    "price": 150000,
+    "currency": "USD",
+    "rooms": 2,
+    "area": 65,
+    "address": "termiz",
+    "lat": 37.22691134852854,
+    "lng": 67.28156089782716,
+    "cover": "/images/3-mtp2v3mb-cover.jpg",
+    "panoramas": [
+      {
+        "id": "zal",
+        "title": "Zal",
+        "url": "/pano/3-mtp2v3mb-zal.jpg"
+      }
+    ],
+    "phone": "+998991686422",
+    "telegram": ""
   }
 ]
