@@ -271,7 +271,10 @@ export function AdminView({ listings, onClose }: AdminViewProps) {
           </label>
         </div>
 
-        <p className="admin-hint">Xaritani bosing — pin shu yerga tushadi.</p>
+        <h3>Uy joyi — xaritadan belgilang</h3>
+        <p className="admin-hint">
+          Xaritani bosing yoki ko‘k/yashil pinni ushlab kerakli uyga sudrang.
+        </p>
         <AdminMap
           lat={lat}
           lng={lng}
@@ -281,8 +284,8 @@ export function AdminView({ listings, onClose }: AdminViewProps) {
             setLng(nextLng)
           }}
         />
-        <p className="admin-hint">
-          {lat.toFixed(5)}, {lng.toFixed(5)}
+        <p className="admin-status">
+          Belgilangan joy: {lat.toFixed(5)}, {lng.toFixed(5)}
         </p>
 
         <label className="admin-field">

@@ -1,4 +1,5 @@
-import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet'
+import { useEffect } from 'react'
+import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from 'react-leaflet'
 import L from 'leaflet'
 import type { ListingType } from '../types'
 
@@ -18,6 +19,16 @@ function ClickPick({ onPick }: { onPick: (lat: number, lng: number) => void }) {
   return null
 }
 
+function FollowPin({ lat, lng }: { lat: number; lng: number }) {
+  const map = useMap()
+
+  useEffect(() => {
+    map.panTo([lat, lng])
+  }, [lat, lng, map])
+
+  return null
+}
+
 export function AdminMap({ lat, lng, type, onPick }: AdminMapProps) {
   const icon = L.divIcon({
     className: 'map-pin-wrap',
@@ -27,13 +38,24 @@ export function AdminMap({ lat, lng, type, onPick }: AdminMapProps) {
   })
 
   return (
-    <MapContainer center={TERMIZ} zoom={13} zoomControl={false} className="admin-map">
+    <MapContainer center={TERMIZ} zoom={15} className="admin-map">
       <TileLayer
         attribution='&copy; OpenStreetMap'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <ClickPick onPick={onPick} />
-      <Marker position={[lat, lng]} icon={icon} />
+      <FollowPin lat={lat} lng={lng} />
+      <Marker
+        position={[lat, lng]}
+        icon={icon}
+        draggable
+        eventHandlers={{
+          dragend: (event) => {
+            const point = event.target.getLatLng()
+            onPick(point.lat, point.lng)
+          },
+        }}
+      />
     </MapContainer>
   )
 }
