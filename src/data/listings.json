@@ -42,17 +42,17 @@
     "address": "Manguzar MFY, Termiz",
     "lat": 37.237,
     "lng": 67.268,
-    "cover": "/images/yunusobod-2.jpg",
+    "cover": "/images/manguzar-2-cover.jpg",
     "panoramas": [
       {
         "id": "zal",
         "title": "Zal",
-        "url": "/pano/zal.jpg?v=2"
+        "url": "/pano/manguzar-2-zal.jpg"
       },
       {
         "id": "yotoqxona",
         "title": "Yotoqxona",
-        "url": "/pano/yotoqxona.jpg?v=2"
+        "url": "/pano/manguzar-2-yotoqxona.jpg"
       }
     ],
     "phone": "+998907778899",
