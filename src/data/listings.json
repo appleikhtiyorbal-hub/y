@@ -101,5 +101,27 @@
     ],
     "phone": "+998991686422",
     "telegram": ""
+  },
+  {
+    "id": "3-mtp36set",
+    "type": "sale",
+    "title": "3",
+    "price": 30,
+    "currency": "USD",
+    "rooms": 2,
+    "area": 33,
+    "address": "termuixz",
+    "lat": 37.2242,
+    "lng": 67.2783,
+    "cover": "/images/3-mtp36set-cover.jpg",
+    "panoramas": [
+      {
+        "id": "zal",
+        "title": "Zal",
+        "url": "/pano/3-mtp36set-zal.jpg"
+      }
+    ],
+    "phone": "965565656565",
+    "telegram": ""
   }
 ]
