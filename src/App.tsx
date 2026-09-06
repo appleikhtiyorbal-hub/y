@@ -17,7 +17,9 @@ const AdminView = lazy(async () => {
   return { default: module.AdminView }
 })
 
-const listings = (listingsData as Listing[]).map((listing) => ({
+const rawListings = listingsData as Listing[]
+
+const listings = rawListings.map((listing) => ({
   ...listing,
   cover: assetUrl(listing.cover),
   panoramas: listing.panoramas.map((pano) => ({
@@ -130,7 +132,7 @@ export default function App() {
 
       {showAdmin && (
         <Suspense fallback={<div className="admin">Admin yuklanmoqda…</div>}>
-          <AdminView listings={listings} onClose={closeAdmin} />
+          <AdminView listings={rawListings} onClose={closeAdmin} />
         </Suspense>
       )}
     </div>

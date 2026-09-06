@@ -38,6 +38,6 @@ WEBAPP_URL=https://....trycloudflare.com
 Saytda: https://appleikhtiyorbal-hub.github.io/y/#/admin  
 yoki **Uy 360** sarlavhasini 5 marta bosing.
 
-GitHub Personal Access Token kerak (`repo` huquqi). Token faqat brauzerda saqlanadi. Saqlagach Actions `gh-pages` ni 1–2 daqiqada yangilaydi.
+GitHub Personal Access Token kerak (`repo` huquqi). Token faqat brauzerda saqlanadi. E’lonni o‘zgartirish yoki o‘chirish ham admin ro‘yxatidan qilinadi. Saqlagach Actions `gh-pages` ni 1–2 daqiqada yangilaydi.
 
 360° rasm **equirectangular** bo‘lishi kerak (Insta360 / Ricoh Theta). Oddiy telefon rasmi 360 bo‘lmaydi.
